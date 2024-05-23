@@ -15,7 +15,7 @@ e_id  | p_id  | p_name   | location |
 
 --> Find the detail of the employee  who is working on at least one project
 
-Select * from emp where e_id exists(Select e_id from project where emp.e_id = project.e_id);
+Select * from emp where exists(Select e_id from project where emp.e_id = project.e_id);
 
 --> output --> 
 1  | Ravi  | Chandigarh |
